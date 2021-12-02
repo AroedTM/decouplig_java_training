@@ -16,6 +16,6 @@ public class ContextualLogger implements Logger {
 
     @Override
     public void log(String message){
-        this.my_logger.log(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS")) + " - " + this.my_class + " - " + message);
+        this.my_logger.log(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS")) + " " + this.my_class + " " + message);
     }
 }
