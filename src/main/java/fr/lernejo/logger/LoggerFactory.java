@@ -9,14 +9,14 @@ public class LoggerFactory {
         return new CompositeLogger(
             new FilteredLogger(
                 new ContextualLogger(
-                    new FileLogger("C://Users/engue/OneDrive/4A/S7/Architecture logiciel/TP Interfaces/logs.txt"),
-                    name
+                    name,
+                    new FileLogger("./target/logs.txt")
                 ),
                 message -> name.contains("simulation")
             ),
             new ContextualLogger(
-                new ConsoleLogger(),
-                name
+                name,
+                new ConsoleLogger()
             )
         );
     }

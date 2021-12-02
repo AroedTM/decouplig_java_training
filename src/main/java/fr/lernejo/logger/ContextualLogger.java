@@ -1,6 +1,5 @@
 package fr.lernejo.logger;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -9,7 +8,7 @@ public class ContextualLogger implements Logger {
     Logger my_logger;
     String my_class;
 
-    public ContextualLogger(Logger my_logger, String my_class) {
+    public ContextualLogger(String my_class, Logger my_logger) {
         this.my_logger = my_logger;
         this.my_class = my_class;
     }
